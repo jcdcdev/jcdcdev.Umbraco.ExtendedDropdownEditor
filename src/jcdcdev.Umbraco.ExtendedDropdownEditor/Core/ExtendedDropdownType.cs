@@ -4,5 +4,5 @@ public enum ExtendedDropdownType
 {
     Unknown = 0,
     File = 1,
-    Url = 2,
+    Url = 2
 }

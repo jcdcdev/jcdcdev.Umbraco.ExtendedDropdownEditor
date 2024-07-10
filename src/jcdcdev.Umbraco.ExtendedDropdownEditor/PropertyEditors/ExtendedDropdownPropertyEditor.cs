@@ -1,7 +1,7 @@
+using jcdcdev.Umbraco.ExtendedDropdownEditor.Core;
 using Umbraco.Cms.Core.IO;
 using Umbraco.Cms.Core.PropertyEditors;
 using Umbraco.Cms.Core.Serialization;
-using jcdcdev.Umbraco.ExtendedDropdownEditor.Core;
 
 namespace jcdcdev.Umbraco.ExtendedDropdownEditor.PropertyEditors;
 
@@ -13,12 +13,6 @@ public class ExtendedDropdownPropertyEditor : DropDownFlexiblePropertyEditor
 {
     private readonly IIOHelper _ioHelper;
 
-    protected override IConfigurationEditor CreateConfigurationEditor()
-    {
-        var config = new ExtendedDropdownConfigurationEditor(_ioHelper);
-        return config;
-    }
-
 
     public ExtendedDropdownPropertyEditor(
         IDataValueEditorFactory dataValueEditorFactory,
@@ -26,5 +20,11 @@ public class ExtendedDropdownPropertyEditor : DropDownFlexiblePropertyEditor
         IConfigurationEditorJsonSerializer configurationEditorJsonSerializer) : base(dataValueEditorFactory, ioHelper, configurationEditorJsonSerializer)
     {
         _ioHelper = ioHelper;
+    }
+
+    protected override IConfigurationEditor CreateConfigurationEditor()
+    {
+        var config = new ExtendedDropdownConfigurationEditor(_ioHelper);
+        return config;
     }
 }

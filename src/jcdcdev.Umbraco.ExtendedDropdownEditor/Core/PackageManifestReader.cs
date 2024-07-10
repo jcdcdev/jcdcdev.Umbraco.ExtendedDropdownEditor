@@ -4,7 +4,8 @@ using Umbraco.Cms.Core.Manifest;
 using Umbraco.Cms.Infrastructure.Manifest;
 
 namespace jcdcdev.Umbraco.ExtendedDropdownEditor.Core;
-public class PackageManifestReader() : IPackageManifestReader
+
+public class PackageManifestReader : IPackageManifestReader
 {
     public async Task<IEnumerable<PackageManifest>> ReadPackageManifestsAsync()
     {
