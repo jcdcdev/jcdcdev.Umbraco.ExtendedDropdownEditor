@@ -2,7 +2,7 @@
 
 public static class Constants
 {
-    public const string PackageName = "Simple Workspace Views";
+    public const string PackageName = "Extended Dropdown Editor";
 
     public class Api
     {
