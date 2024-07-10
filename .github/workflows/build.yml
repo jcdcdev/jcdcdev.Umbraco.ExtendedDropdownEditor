@@ -3,6 +3,8 @@ on:
   pull_request:
     branches: "*"
   workflow_dispatch:
+  push:
+    branches: "*"
 jobs:
   metadata:
     uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/generate-project-metadata.yml@main
