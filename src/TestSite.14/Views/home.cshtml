@@ -13,7 +13,7 @@
             </div>
             <div>
                 <h2>Extended Dropdown Editor</h2>
-                @foreach (var item in Model.ExtendedDropdown)
+                @foreach (var item in Model.ExtendedDropdown ?? [])
                 {
                     <div>@item</div>
                 }

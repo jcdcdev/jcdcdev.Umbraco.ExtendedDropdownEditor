@@ -10,7 +10,7 @@ const manifest: ManifestPropertyEditorUi =
             label: "Extended Dropdown",
             icon: "icon-list",
             group: "pickers",
-            propertyEditorSchemaAlias: "jcdcdev.Umbraco.ExtendedDropdownEditor",
+            propertyEditorSchemaAlias: "jcdcdev.Umbraco.ExtendedDropdown",
             settings: {
                 properties: [
                     {
@@ -20,17 +20,29 @@ const manifest: ManifestPropertyEditorUi =
                     },
                     {
                         alias: "file",
-                        label: "JSON File",
+                        label: "File",
+                        description: "Select a file from the wwwroot or App_Plugins folder",
                         propertyEditorUiAlias: "Umb.PropertyEditorUi.StaticFilePicker",
+                        config: [
+                            {
+                                alias: 'validationLimit',
+                                value: {
+                                    min: 0,
+                                    max: 1
+                                }
+                            },
+                        ]
                     },
                     {
                         alias: "filePathOverride",
                         label: "File Path Override",
+                        description: "Provide a path relative to the root of the web project",
                         propertyEditorUiAlias: "Umb.PropertyEditorUi.TextBox",
                     },
                     {
                         alias: "url",
                         label: "URL",
+                        description: "Works with GET requests with no authentication",
                         propertyEditorUiAlias: "Umb.PropertyEditorUi.TextBox",
                     }
                 ]

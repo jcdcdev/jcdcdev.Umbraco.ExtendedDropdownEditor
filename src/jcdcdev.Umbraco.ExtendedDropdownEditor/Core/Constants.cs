@@ -13,7 +13,7 @@ public static class Constants
     {
         public class Aliases
         {
-            public const string ExtendedDropdownEditor = "jcdcdev.Umbraco.ExtendedDropdownEditor";
+            public const string ExtendedDropdownEditor = "jcdcdev.Umbraco.ExtendedDropdown";
         }
     }
 }

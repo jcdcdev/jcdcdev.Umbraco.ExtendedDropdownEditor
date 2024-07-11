@@ -15,7 +15,7 @@ public class DropdownExampleController : Controller
             "Tabby",
             "Ragdoll",
             "Persian",
-            "Siamese",
+            "Siamese"
         };
         return Ok(cats);
     }
