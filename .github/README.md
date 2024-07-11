@@ -15,8 +15,8 @@ Select any file in the `wwwroot` or `App_Plugins` directory
 
 #### Examples
 
-`wwwroot/data.json`
-`App_Plugins/data.json
+- `wwwroot/data.json`
+- `App_Plugins/data.json`
 
 > [!WARNING]
 > Please note that any files in these directories are publicly accessible via URL!
