@@ -11,6 +11,22 @@
             <div>
                 @await Html.GetBlockGridHtmlAsync(Model.GridContent)
             </div>
+            <div>
+                <h2>Extended Dropdown Editor</h2>
+                @foreach (var item in Model.ExtendedDropdown ?? [])
+                {
+                    <div>@item</div>
+                }
+            </div>
+            <div>
+                <h2>Extended Dropdown Editor (Single)</h2>
+                <div>@Model.ExtendedDropdownSingle</div>
+
+            </div>
+            <div>
+                <h2>Extended Dropdown Editor by URL</h2>
+                <div>@Model.ExtendedDropdownByUrl</div>
+            </div>
         </div>
     </div>
 </div>
