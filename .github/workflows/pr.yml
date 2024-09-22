@@ -20,15 +20,16 @@ jobs:
         with:
           fetch-depth: 0
       - name: Get branches
+        id: get-branches
         shell: pwsh
         run: |
-          $branches = git branch -r --sort=-committerdate
-          # filter branches that look like dev/vX where X is a number
-          $branches = $branches -match 'dev/v\d+'
-          $branchJson = $branches | ConvertTo-Json -Compress
+          $branches = git branch -r --format="%(refname:short)" | ForEach-Object { $_.Trim() -replace "^origin/", "" }
+          # filter only branches that start with dev/
+          $branches = $branches | Where-Object { $_ -match "^dev/" }
+          $branchJson = ConvertTo-Json @($branches) -Compress
           Write-Host "branches=$branchJson"
           echo "branches=$branchJson" >> $env:GITHUB_OUTPUT
-  update-releases:
+  create-pr:
     needs: get-branches
     strategy:
       max-parallel: 1
@@ -36,6 +37,10 @@ jobs:
           branch: ${{fromJson(needs.get-branches.outputs.branches)}}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set Env
         run: |
           TARGET=$(echo ${{ matrix.branch }} | sed 's/dev\///')
@@ -56,10 +61,12 @@ jobs:
             exit 1
           fi
 
+          echo "SOURCE=$SOURCE"
+          echo "TARGET=$TARGET"
           echo "SOURCE=$SOURCE" >> $GITHUB_ENV
           echo "TARGET=$TARGET" >> $GITHUB_ENV
       - name: Run the Action
-        if: ${{ !github.event.inputs.dry-run }}
+        if: ${{ github.event.inputs.dry-run == 'false' }}
         uses: devops-infra/action-pull-request@v0.5.5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
