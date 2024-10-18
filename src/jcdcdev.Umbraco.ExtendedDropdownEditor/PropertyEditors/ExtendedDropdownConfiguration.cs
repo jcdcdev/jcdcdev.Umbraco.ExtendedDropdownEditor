@@ -14,11 +14,11 @@ public class ExtendedDropdownConfiguration : DropDownFlexibleConfiguration
 
     [ConfigurationField("filePathOverride")]
     [JsonPropertyName("filePathOverride")]
-    public string FilePathOverride { get; set; }
+    public string FilePathOverride { get; set; } = string.Empty;
 
     [ConfigurationField("url")]
     [JsonPropertyName("url")]
-    public string Url { get; set; }
+    public string Url { get; set; } = string.Empty;
 
     [JsonIgnore] public ExtendedDropdownType DropdownType => GetDropdownType();
     [JsonIgnore] public string? FilePath => HttpUtility.UrlDecode(FilePathOverride.IfNullOrWhiteSpace(File.FirstOrDefault()))?.Replace("%dot%", ".");
