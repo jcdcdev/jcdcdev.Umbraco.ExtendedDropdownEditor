@@ -1,11 +1,10 @@
-﻿import {ManifestLocalization} from "@umbraco-cms/backoffice/extension-registry";
-
-export const ManifestLocalizations: Array<ManifestLocalization> = [
+﻿export const ManifestLocalizations: Array<UmbExtensionManifest> = [
     {
         type: 'localization',
         alias: 'ExtendedDropdownEditor.lang.enus',
         name: 'English (US)',
         weight: 0,
+        // @ts-ignore
         meta: {
             culture: 'en-us'
         },
@@ -16,6 +15,7 @@ export const ManifestLocalizations: Array<ManifestLocalization> = [
         alias: 'ExtendedDropdownEditor.lang.engb',
         name: 'English (UK)',
         weight: 0,
+        // @ts-ignore
         meta: {
             culture: 'en-gb'
         },

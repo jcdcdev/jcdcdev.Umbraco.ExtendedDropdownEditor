@@ -19,7 +19,7 @@ public class PackageManifestReader : IPackageManifestReader
             Extensions = []
         };
 
-        extensions.Add(new EntryPointManifest
+        extensions.Add(new BackofficeEntryPointManifest()
         {
             Name = "extended-dropdown-editor.entrypoint",
             Alias = "extended-dropdown-editor.entrypoint",

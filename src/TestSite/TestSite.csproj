@@ -25,10 +25,6 @@
       <_ContentIncludedByDefault Remove="Views\ExtendedDropdownEditors\Basic.cshtml" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Include="App_Plugins\data.json" />
-    </ItemGroup>
-
     <PropertyGroup>
         <!-- Razor files are needed for the backoffice to work correctly -->
         <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
