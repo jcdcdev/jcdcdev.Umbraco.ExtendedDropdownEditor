@@ -1,13 +1,11 @@
-﻿import {css, html, LitElement, PropertyValues} from 'lit';
-import {customElement, property, state} from 'lit/decorators.js';
-import {UmbElementMixin} from "@umbraco-cms/backoffice/element-api";
-import {UUISelectElement, UUISelectEvent} from "@umbraco-cms/backoffice/external/uui";
-import {EXTENDED_MARKDOWN_EDITOR_CONTEXT_TOKEN, ExtendedDropdownEditorContext} from "../context/extended-dropdown-editor.context";
-import {UmbPropertyEditorUiElement} from "@umbraco-cms/backoffice/extension-registry";
-import {UMB_CONTENT_PROPERTY_CONTEXT} from "@umbraco-cms/backoffice/content";
-import {UmbPropertyEditorConfigCollection, UmbPropertyValueChangeEvent} from "@umbraco-cms/backoffice/property-editor";
-import {map} from 'lit/directives/map.js';
-
+﻿import { css, html, LitElement, PropertyValues } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
+import { UmbElementMixin } from "@umbraco-cms/backoffice/element-api";
+import { UUISelectElement, UUISelectEvent } from "@umbraco-cms/backoffice/external/uui";
+import { EXTENDED_MARKDOWN_EDITOR_CONTEXT_TOKEN, ExtendedDropdownEditorContext } from "../context/extended-dropdown-editor.context";
+import { UMB_CONTENT_PROPERTY_CONTEXT } from "@umbraco-cms/backoffice/content";
+import { UmbPropertyEditorConfigCollection, UmbPropertyEditorUiElement, UmbPropertyValueChangeEvent } from "@umbraco-cms/backoffice/property-editor";
+import { map } from 'lit/directives/map.js';
 @customElement('extended-dropdown-editor')
 export class ExtendedDropdownEditor extends UmbElementMixin(LitElement) implements UmbPropertyEditorUiElement {
 
@@ -15,7 +13,7 @@ export class ExtendedDropdownEditor extends UmbElementMixin(LitElement) implemen
 
     #selection: Array<string> = [];
 
-    @property({type: Array})
+    @property({ type: Array })
     public set value(value: Array<string> | string | undefined) {
         this.#selection = Array.isArray(value) ? value : value ? [value] : [];
     }
@@ -64,7 +62,7 @@ export class ExtendedDropdownEditor extends UmbElementMixin(LitElement) implemen
         const items = results.data?.items;
 
         if (Array.isArray(items) && items.length > 0) {
-            this._options = items.map((item) => ({name: item, value: item, selected: this.#selection.includes(item)}))
+            this._options = items.map((item) => ({ name: item, value: item, selected: this.#selection.includes(item) }))
         }
     }
 
@@ -107,10 +105,10 @@ export class ExtendedDropdownEditor extends UmbElementMixin(LitElement) implemen
         return html`
             <select id="native" multiple @change=${this.#onChangeMulitple}>
                 ${map(
-                    this._options,
-                    (item) => html`
+            this._options,
+            (item) => html`
                         <option value=${item.value} ?selected=${item.selected}>${item.name}</option>`,
-                )}
+        )}
             </select>
         `;
     }

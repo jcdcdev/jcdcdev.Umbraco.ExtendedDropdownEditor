@@ -1,5 +1,6 @@
 # jcdcdev.Umbraco.ExtendedDropdownEditor
 
+[![Documentation](https://img.shields.io/badge/Docs-Quickstart-394933?style=flat&logo=github)](https://github.com/jcdcdev/jcdcdev.Umbraco.ExtendedDropdownEditor/tree/v15?tab=readme-ov-file#quick-start)
 [![Umbraco Marketplace](https://img.shields.io/badge/Umbraco-Marketplace-%233544B1?style=flat&logo=umbraco)](https://marketplace.umbraco.com/package/jcdcdev.Umbraco.ExtendedDropdownEditor)
 [![GitHub License](https://img.shields.io/github/license/jcdcdev/jcdcdev.Umbraco.ExtendedDropdownEditor?color=8AB803&label=License&logo=github)](https://github.com/jcdcdev/jcdcdev.Umbraco.ExtendedDropdownEditor/blob/v14/LICENSE)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/jcdcdev.Umbraco.ExtendedDropdownEditor?color=cc9900&label=Downloads&logo=nuget)](https://www.nuget.org/packages/jcdcdev.Umbraco.ExtendedDropdownEditor/)

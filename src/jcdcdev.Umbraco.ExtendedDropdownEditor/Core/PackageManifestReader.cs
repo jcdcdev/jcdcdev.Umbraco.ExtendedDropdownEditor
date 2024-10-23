@@ -7,7 +7,7 @@ namespace jcdcdev.Umbraco.ExtendedDropdownEditor.Core;
 
 public class PackageManifestReader : IPackageManifestReader
 {
-    public async Task<IEnumerable<PackageManifest>> ReadPackageManifestsAsync()
+    public Task<IEnumerable<PackageManifest>> ReadPackageManifestsAsync()
     {
         var extensions = new List<IManifest>();
         var packageManifest = new PackageManifest
@@ -19,7 +19,7 @@ public class PackageManifestReader : IPackageManifestReader
             Extensions = []
         };
 
-        extensions.Add(new EntryPointManifest
+        extensions.Add(new BackofficeEntryPointManifest()
         {
             Name = "extended-dropdown-editor.entrypoint",
             Alias = "extended-dropdown-editor.entrypoint",
@@ -27,6 +27,6 @@ public class PackageManifestReader : IPackageManifestReader
         });
 
         packageManifest.Extensions = extensions.OfType<object>().ToArray();
-        return new[] { packageManifest };
+        return Task.FromResult<IEnumerable<PackageManifest>>([packageManifest]);
     }
 }
