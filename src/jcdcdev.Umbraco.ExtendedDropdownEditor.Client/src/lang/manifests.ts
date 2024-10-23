@@ -4,7 +4,6 @@
         alias: 'ExtendedDropdownEditor.lang.enus',
         name: 'English (US)',
         weight: 0,
-        // @ts-ignore
         meta: {
             culture: 'en-us'
         },
@@ -15,7 +14,6 @@
         alias: 'ExtendedDropdownEditor.lang.engb',
         name: 'English (UK)',
         weight: 0,
-        // @ts-ignore
         meta: {
             culture: 'en-gb'
         },
