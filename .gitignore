@@ -357,3 +357,4 @@ src/.idea
 *.sqlite.db*
 **/wwwroot/App_Plugins/**/dist
 .idea
+**/umbraco/Data/TEMP/
