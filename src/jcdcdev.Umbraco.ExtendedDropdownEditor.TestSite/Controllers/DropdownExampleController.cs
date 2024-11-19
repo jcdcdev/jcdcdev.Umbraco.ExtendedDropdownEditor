@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace TestSite.Fourteen.Controllers;
+namespace jcdcdev.Umbraco.ExtendedDropdownEditor.TestSite.Controllers;
 
 [Route("/api")]
 public class DropdownExampleController : Controller

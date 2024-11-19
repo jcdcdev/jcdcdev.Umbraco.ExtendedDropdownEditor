@@ -9,18 +9,4 @@ export type GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyData = {
     dataTypeKey: string;
 };
 
-export type GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyResponse = ExtendedDropdownEditorResponse;
-
-export type $OpenApiTs = {
-    '/umbraco/ExtendedDropdownEditor/api/v1/items/{dataTypeKey}': {
-        get: {
-            req: GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyData;
-            res: {
-                /**
-                 * OK
-                 */
-                200: ExtendedDropdownEditorResponse;
-            };
-        };
-    };
-};
+export type GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyResponse = ((ExtendedDropdownEditorResponse));

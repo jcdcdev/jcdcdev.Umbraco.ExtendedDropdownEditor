@@ -28,10 +28,12 @@ namespace jcdcdev.Umbraco.ExtendedDropdownEditor.Web;
 [Authorize(Policy = AuthorizationPolicies.BackOfficeAccess)]
 [AppendEventMessages]
 [Produces("application/json")]
-public class ExtendedDropdownEditorController(IDataTypeService dataTypeService, IPhysicalFileSystem fileSystem, HttpClient client, ILogger<ExtendedDropdownEditorController> logger) : ControllerBase
+public class ExtendedDropdownEditorController(
+    IDataTypeService dataTypeService,
+    IPhysicalFileSystem fileSystem,
+    HttpClient client,
+    ILogger<ExtendedDropdownEditorController> logger) : ControllerBase
 {
-    private readonly ILogger _logger = logger;
-
     [HttpGet("items/{dataTypeKey:guid}")]
     [Produces<ExtendedDropdownEditorResponse>]
     public async Task<IActionResult> Items(Guid dataTypeKey)
@@ -49,7 +51,7 @@ public class ExtendedDropdownEditorController(IDataTypeService dataTypeService, 
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error getting items for data type {DataTypeKey}", dataTypeKey);
+            logger.LogError(ex, "Error getting items for data type {DataTypeKey}", dataTypeKey);
             return BadRequest(ex.Message);
         }
     }
@@ -64,7 +66,7 @@ public class ExtendedDropdownEditorController(IDataTypeService dataTypeService, 
         var configuration = dataType.ConfigurationAs<ExtendedDropdownConfiguration>();
         if (configuration == null)
         {
-            _logger.LogWarning("No configuration found for data type {DataTypeKey}", dataType.Key);
+            logger.LogWarning("No configuration found for data type {DataTypeKey}", dataType.Key);
             return model;
         }
 
@@ -99,7 +101,7 @@ public class ExtendedDropdownEditorController(IDataTypeService dataTypeService, 
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error getting items from url {Url}", url);
+            logger.LogError(ex, "Error getting items from url {Url}", url);
             throw;
         }
     }
@@ -108,13 +110,13 @@ public class ExtendedDropdownEditorController(IDataTypeService dataTypeService, 
     {
         if (filePath.IsNullOrWhiteSpace())
         {
-            _logger.LogDebug("No file path specified");
+            logger.LogDebug("No file path specified");
             return [];
         }
 
         if (!fileSystem.FileExists(filePath))
         {
-            _logger.LogDebug("File {FilePath} does not exist", filePath);
+            logger.LogDebug("File {FilePath} does not exist", filePath);
             return [];
         }
 
