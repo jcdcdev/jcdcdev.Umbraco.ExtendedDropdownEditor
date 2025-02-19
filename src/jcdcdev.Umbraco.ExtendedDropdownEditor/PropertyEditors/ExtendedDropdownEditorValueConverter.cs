@@ -5,12 +5,9 @@ using Umbraco.Cms.Core.Serialization;
 
 namespace jcdcdev.Umbraco.ExtendedDropdownEditor.PropertyEditors;
 
-public class ExtendedDropdownEditorValueConverter : FlexibleDropdownPropertyValueConverter
+public class ExtendedDropdownEditorValueConverter(IJsonSerializer jsonSerializer)
+    : FlexibleDropdownPropertyValueConverter(jsonSerializer)
 {
-    public ExtendedDropdownEditorValueConverter(IJsonSerializer jsonSerializer) : base(jsonSerializer)
-    {
-    }
-
     public override bool IsConverter(IPublishedPropertyType propertyType) =>
         propertyType.EditorAlias.Equals(Constants.PropertyEditors.Aliases.ExtendedDropdownEditor);
 }
