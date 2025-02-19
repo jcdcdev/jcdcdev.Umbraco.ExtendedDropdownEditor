@@ -1,11 +1,10 @@
 ﻿import { ManifestPropertyEditorUi } from "@umbraco-cms/backoffice/property-editor";
 
-const manifest: ManifestPropertyEditorUi =
+const man: ManifestPropertyEditorUi =
 {
     type: "propertyEditorUi",
     alias: "jcdcdev.Umbraco.PropertyEditorUi.ExtendedDropdown",
     name: "Extended Dropdown Editor",
-    element: () => import("./extended-dropdown-editor.ts"),
     meta: {
         label: "Extended Dropdown",
         icon: "icon-list",
@@ -49,4 +48,4 @@ const manifest: ManifestPropertyEditorUi =
         }
     }
 }
-export const manifests: Array<UmbExtensionManifest> = [manifest];
+export const manifest: UmbExtensionManifest = man;
