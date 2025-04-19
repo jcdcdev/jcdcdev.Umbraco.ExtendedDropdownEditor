@@ -12,7 +12,7 @@
 		"lit": "^3.2.1"
 	},
 	"devDependencies": {
-		"@umbraco-cms/backoffice": "^15.2.2",
+		"@umbraco-cms/backoffice": "^15.3.0",
 		"typescript": "^5.8.2",
 		"vite": "^5.4.18"
 	},
