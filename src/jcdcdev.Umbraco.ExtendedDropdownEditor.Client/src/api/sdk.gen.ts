@@ -11,10 +11,12 @@ import type { GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyData, GetUm
  * @returns unknown OK
  * @throws ApiError
  */
-export const getUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKey = (data: GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyData): CancelablePromise<GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyResponse> => { return __request(OpenAPI, {
-    method: 'GET',
-    url: '/umbraco/ExtendedDropdownEditor/api/v1/items/{dataTypeKey}',
-    path: {
-        dataTypeKey: data.dataTypeKey
-    }
-}); };
+export const getUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKey = (data: GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyData): CancelablePromise<GetUmbracoExtendedDropdownEditorApiV1ItemsByDataTypeKeyResponse> => {
+    return __request(OpenAPI, {
+        method: 'GET',
+        url: '/umbraco/ExtendedDropdownEditor/api/v1/items/{dataTypeKey}',
+        path: {
+            dataTypeKey: data.dataTypeKey
+        }
+    });
+};
