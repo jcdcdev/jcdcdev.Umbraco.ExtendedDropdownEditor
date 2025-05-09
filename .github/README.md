@@ -8,6 +8,11 @@
 
 A custom dropdown property editor for Umbraco that supports dynamic data sources.
 
+> [!IMPORTANT]
+> Version 14 will only receive security updates and no new features.
+
+> Please review the [security policy](https://github.com/jcdcdev/jcdcdev.Umbraco.ExtendedDropdownEditor?tab=security-ov-file#supported-versions) for more information.
+
 ## Quick Start
 
 ### Install Package
