@@ -23,6 +23,11 @@ public class ExtendedDropDownEditorDataTypeSaveNotificationHandler(IExtendedDrop
             }
 
             var items = await service.GetItems(config);
+            if (dataType.ConfigurationData.ContainsKey("items"))
+            {
+                dataType.ConfigurationData.Remove("items");
+            }
+
             dataType.ConfigurationData.Add("items", items);
         }
     }
