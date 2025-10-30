@@ -58,14 +58,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::System.Collections.Generic.IEnumerable<string> ExtendedDropdown => global::Umbraco.Cms.Web.Common.PublishedModels.BasePage.GetExtendedDropdown(this, _publishedValueFallback);
 
 		///<summary>
-		/// Extended Dropdown by URL
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("extendedDropdownByUrl")]
-		public virtual string ExtendedDropdownByUrl => global::Umbraco.Cms.Web.Common.PublishedModels.BasePage.GetExtendedDropdownByUrl(this, _publishedValueFallback);
-
-		///<summary>
 		/// Extended Dropdown Single
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]

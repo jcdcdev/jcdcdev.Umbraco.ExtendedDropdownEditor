@@ -27,11 +27,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::System.Collections.Generic.IEnumerable<string> ExtendedDropdown { get; }
 
-		/// <summary>Extended Dropdown by URL</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ExtendedDropdownByUrl { get; }
-
 		/// <summary>Extended Dropdown Single</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -86,19 +81,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::System.Collections.Generic.IEnumerable<string> GetExtendedDropdown(IBasePage that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<string>>(publishedValueFallback, "extendedDropdown");
-
-		///<summary>
-		/// Extended Dropdown by URL
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("extendedDropdownByUrl")]
-		public virtual string ExtendedDropdownByUrl => GetExtendedDropdownByUrl(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Extended Dropdown by URL</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetExtendedDropdownByUrl(IBasePage that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "extendedDropdownByUrl");
 
 		///<summary>
 		/// Extended Dropdown Single
