@@ -8,9 +8,6 @@
 
 A custom dropdown property editor for Umbraco that supports dynamic data sources.
 
-> [!NOTE]
-> Version 17 is not released yet.
-
 ## Quick Start
 
 ### Install Package
