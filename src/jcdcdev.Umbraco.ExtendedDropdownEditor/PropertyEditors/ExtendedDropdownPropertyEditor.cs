@@ -1,12 +1,7 @@
-using System.ComponentModel.DataAnnotations;
 using jcdcdev.Umbraco.ExtendedDropdownEditor.Core;
 using Umbraco.Cms.Core.IO;
-using Umbraco.Cms.Core.Models;
-using Umbraco.Cms.Core.Models.Validation;
 using Umbraco.Cms.Core.PropertyEditors;
-using Umbraco.Cms.Core.PropertyEditors.Validators;
 using Umbraco.Cms.Core.Serialization;
-using Umbraco.Cms.Core.Strings;
 
 namespace jcdcdev.Umbraco.ExtendedDropdownEditor.PropertyEditors;
 
