@@ -9,13 +9,15 @@
 
 A custom dropdown property editor for Umbraco that supports dynamic data sources.
 
-## Quick Start
+## Installation
 
 ### Install Package
 
 ```csharp
 dotnet add package jcdcdev.Umbraco.ExtendedDropdownEditor 
 ```
+
+## Quick Start
 
 ### Create Data Type
 
