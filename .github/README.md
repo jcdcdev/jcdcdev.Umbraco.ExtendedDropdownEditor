@@ -8,7 +8,6 @@
 
 A custom dropdown property editor for Umbraco that supports dynamic data sources.
 
-
 ## Quick Start
 
 ### Install Package
@@ -25,7 +24,6 @@ dotnet add package jcdcdev.Umbraco.ExtendedDropdownEditor
 - Save the data type.
 
 Now you are ready to use the data type in your content types!
-
 
 
 ## Extending
