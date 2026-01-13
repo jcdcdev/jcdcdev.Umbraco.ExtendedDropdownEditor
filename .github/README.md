@@ -12,7 +12,7 @@ A custom dropdown property editor for Umbraco that supports dynamic data sources
 
 ### Install Package
 
-```csharp
+```powershell
 dotnet add package jcdcdev.Umbraco.ExtendedDropdownEditor 
 ```
 
